@@ -14,7 +14,7 @@ public class Main {
         int aqi;
         //Loading Spring Container with required Object Configuration Details
         ApplicationContext container = new ClassPathXmlApplicationContext("beans.xml");
-        //Initiating our esired Object Creation by calling getBean()
+        //Initiating our esired Object Creation by calling getBean() //Updates
         AirData airobj = (FetchAirQData) container.getBean("DataBean");
 
         aqi = (int) airobj.FetchData();
