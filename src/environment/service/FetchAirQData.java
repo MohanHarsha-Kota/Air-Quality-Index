@@ -15,7 +15,8 @@ public class FetchAirQData implements AirData{
 
     @Override
     public long FetchData() throws IOException, ParseException {
-
+		
+		//Hardcoding the token is never a best practice. This is only for illustrative purposes.
         URL con = new URL("https://api.waqi.info/feed/here/?token=d51ef94ef3ee749ffd4c259f14877ff889d462e8");
         HttpsURLConnection conec = (HttpsURLConnection) con.openConnection();
         try (BufferedReader br = new BufferedReader(new InputStreamReader(conec.getInputStream()))) {
